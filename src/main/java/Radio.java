@@ -19,11 +19,19 @@ public class Radio {
         }
     }
 
+
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
+    }
 
+    public void decreaseVolume() {
+        if (currentVolume != 0) {
+            currentVolume--;
+        } else {
+            currentVolume = 0;
+        }
     }
 
 
@@ -32,13 +40,13 @@ public class Radio {
     }
 
     public void setCurrentWave(int currentWave) {
-    if (currentWave < 0) {
-        return;
-    }
-    if (currentWave > 9) {
-        return;
-    }
-    this.currentWave = currentWave;
+        if (currentWave < 0) {
+            return;
+        }
+        if (currentWave > 9) {
+            return;
+        }
+        this.currentWave = currentWave;
     }
 
     public int getCurrentVolume() {
@@ -52,6 +60,8 @@ public class Radio {
         if (currentVolume > 100) {
             return;
         }
+        this.currentVolume = currentVolume;
     }
 }
+
 
